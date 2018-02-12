@@ -1,0 +1,19 @@
+{
+  "name": "@worldline/sips-sdk-nodejs",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0-beta.1",
+  "author": "Worldline",
+  "license": "MIT",
+  "description": "This package provides a Node.js implementation for SIPS, the Worldline e-payments gateway.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worldline/sips-sdk-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/worldline/sips-sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/worldline/sips-sdk-nodejs/tree/develop#readme"
+}
