@@ -1,3 +1,5 @@
+> :bulb: This package is currently in beta. Although it's fully functional, any feedback is welcome as we try to improve general code style & usage before graduating it to a stable version.
+
 # SIPS Payment SDK [![npm version](https://img.shields.io/npm/v/@worldline/sips-payment-sdk.svg)](https://www.npmjs.com/package/@worldline/sips-payment-sdk)
 This package provides a Node.js implementation for SIPS, the Worldline e-payments gateway.
 
@@ -5,7 +7,7 @@ This package provides a Node.js implementation for SIPS, the Worldline e-payment
 
 ## Installing
 
-This library is provided two separate packages on NPM . To install it, simply run:
+This library is provided as two separate packages on NPM . To install it, simply run:
 ```
 $ npm install sips-payment-sdk sips-payment-dom
 ```
