@@ -1,6 +1,6 @@
 import axios from 'axios';
 import sha256 from 'crypto-js/sha256';
-import { PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData } from 'sips-payment-dom';
+import { PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData } from '@worldline/sips-payment-dom';
 import SealCalculator from './SealCalculator';
 
 const numberFields = ['amount', 'captureDay'];

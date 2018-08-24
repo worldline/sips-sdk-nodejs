@@ -1,5 +1,5 @@
 import hmacSHA256 from 'crypto-js/hmac-sha256';
-import { PaymentRequest } from 'sips-payment-dom';
+import { PaymentRequest } from '@worldline/sips-payment-dom';
 
 const sortAndFilterFunctionsFromEntries = entries => entries
   .filter(entry => typeof entry[1] !== 'function' && typeof entry[1] !== 'undefined' && entry[1] !== null)

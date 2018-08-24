@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import assert from 'assert';
 import { beforeEach, describe, it } from 'mocha';
-import { InitializationResponse, PaymentRequest, Currency, PaymentMeanBrand, CustomerContact, RedirectionStatusCode } from 'sips-payment-dom';
+import { InitializationResponse, PaymentRequest, Currency, PaymentMeanBrand, CustomerContact, RedirectionStatusCode } from '@worldline/sips-payment-dom';
 import SealCalculator from '../src/SealCalculator';
 
 describe('SealCalculator.js', () => {
