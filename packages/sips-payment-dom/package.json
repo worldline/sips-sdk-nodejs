@@ -1,6 +1,6 @@
 {
   "name": "@worldline/sips-payment-dom",
-  "version": "1.0.1-alpha.2",
+  "version": "1.0.1",
   "description": "Common objects for the Worldline SIPS 2.0 API",
   "main": "index.js",
   "keywords": [
