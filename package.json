@@ -1,0 +1,41 @@
+{
+  "name": "@worldline/sips-sdk-nodejs",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Worldline",
+  "license": "MIT",
+  "description": "This package provides a Node.js implementation for SIPS, the Worldline e-payments gateway.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worldline/sips-sdk-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/worldline/sips-sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/worldline/sips-sdk-nodejs/#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "lerna": "^3.1.4",
+    "mocha": "^5.0.0",
+    "rollup": "^0.64.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-resolve": "^0.0.1-predev.1",
+    "rollup-plugin-uglify": "^4.0.0"
+  }
+}

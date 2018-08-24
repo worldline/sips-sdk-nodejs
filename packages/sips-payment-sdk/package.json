@@ -1,0 +1,32 @@
+{
+  "name": "@worldline/sips-payment-sdk",
+  "version": "1.0.1",
+  "description": "Library to interact with the Worldline Sips 2.0 API",
+  "main": "index.js",
+  "keywords": [
+    "worldline",
+    "sips",
+    "payments"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "npm run clean && rollup -c",
+    "test": "mocha --reporter progress --require babel-register **/*.test.js",
+    "lint": "eslint src"
+  },
+  "author": "Worldline",
+  "license": "MIT",
+  "dependencies": {
+    "@worldline/sips-payment-dom": "1.0.1",
+    "axios": "^0.17.1",
+    "crypto-js": "^3.1.9-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worldline/sips-sdk-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/worldline/sips-sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/worldline/sips-sdk-nodejs/#readme"
+}

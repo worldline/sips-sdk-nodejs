@@ -1,4 +1,4 @@
-> :bulb: This package is currently in beta. Although it's fully functional, any feedback is welcome as we try to improve general code style & usage before graduating it to a stable version.
+> :bulb: This package is currently in pre-release. Although it's fully functional, any feedback is welcome as we try to improve general code style & usage before graduating it to a stable version.
 
 # SIPS Payment SDK [![npm version](https://img.shields.io/npm/v/@worldline/sips-payment-sdk.svg)](https://www.npmjs.com/package/@worldline/sips-payment-sdk)
 This package provides a Node.js implementation for SIPS, the Worldline e-payments gateway.
@@ -26,20 +26,20 @@ The example below uses ES6's syntax. To run on any Node.js, code should be trans
 ### Initialization
 First, create a client for the desired environment using your merchant ID, key version & secret key:
 ```js
-import { PaypageClient } from 'sips-payment-sdk';
-import { Environment } from 'sips-payment-dom';
+import { PaypageClient } from '@worldline/sips-payment-sdk';
+import { Environment } from '@worldline/sips-payment-dom';
 
 const paypageClient = new PaypageClient(
   Environment.SIMU, 
-  '002001000000002', 
+  '002001000000001', 
   1, // This shouldn't be hardcoded here...
-  '002001000000002_KEY1'); // ...and neither should this.
+  '002001000000001_KEY1'); // ...and neither should this.
 ```
 
 Then set up a request to initalize a session on the SIPS server:
 
 ```js
-import { PaymentRequest, Currency, OrderChannel } from 'sips-payment-dom';
+import { PaymentRequest, Currency, OrderChannel } from '@worldline/sips-payment-dom';
 
 const paymentRequest = new PaymentRequest();
 paymentRequest.amount = 2;

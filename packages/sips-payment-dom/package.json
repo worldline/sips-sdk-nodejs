@@ -1,0 +1,26 @@
+{
+  "name": "@worldline/sips-payment-dom",
+  "version": "1.0.1",
+  "description": "Common objects for the Worldline SIPS 2.0 API",
+  "main": "index.js",
+  "keywords": [
+    "worldline",
+    "sips",
+    "payments"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "npm run clean && rollup -c",
+    "lint": "eslint src"
+  },
+  "author": "Worldline",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worldline/sips-sdk-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/worldline/sips-sdk-nodejs/issues"
+  },
+  "homepage": "https://github.com/worldline/sips-sdk-nodejs/#readme"
+}
