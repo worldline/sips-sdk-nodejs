@@ -28,5 +28,5 @@
   "bugs": {
     "url": "https://github.com/worldline/sips-sdk-nodejs/issues"
   },
-  "homepage": "https://github.com/worldline/sips-sdk-nodejs/tree/develop#readme"
+  "homepage": "https://github.com/worldline/sips-sdk-nodejs/#readme"
 }
