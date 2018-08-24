@@ -1,7 +1,7 @@
 import babel from 'rollup-plugin-babel';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
-import uglify from 'rollup-plugin-uglify';
+import { uglify } from 'rollup-plugin-uglify';
 
 const config = [{
   input: 'src/index.js',
@@ -9,7 +9,7 @@ const config = [{
     file: 'dist/sips-payment-sdk.js',
     format: 'cjs',
   },
-  external: ['axios', 'crypto-js/sha256', 'crypto-js/hmac-sha256', 'sips-payment-dom'],
+  external: ['axios', 'crypto-js/sha256', 'crypto-js/hmac-sha256', '@worldline/sips-payment-dom'],
   plugins: [
     resolve({
       customResolveOptions: {
