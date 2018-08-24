@@ -1,45 +1,85 @@
 export default class AcquirerResponseCode {
   static TRANSACTION_SUCCESS = '00';
+
   static CONTACT_ISSUER = '02';
+
   static INVALID_ACCEPTOR = '03';
+
   static KEEP_PAYMENT_MEAN = '04';
+
   static DO_NOT_HONOUR = '05';
+
   static KEEP_PAYMENT_MEAN_UNDER_CONDITION = '07';
+
   static APPROVE_AFTER_IDENTIFICATION = '08';
+
   static INVALID_TRANSACTION = '12';
+
   static INVALID_AMOUNT = '13';
+
   static INVALID_PAN = '14';
+
   static UNKNOWN_ISSUER = '15';
+
   static CUSTOMER_CANCELLATION = '17';
+
   static NOT_AUTHORIZED = '24';
+
   static TRANSACTION_NOT_FOUND = '25';
+
   static INVALID_FORMAT = '30';
+
   static UNKNOWN_ACQUIRER_ID = '31';
+
   static PAYMENT_MEAN_EXPIRED = '33';
+
   static FRAUD_SUSPECTED = '34';
+
   static NOT_SUPPORTED = '40';
+
   static PAYMENT_MEAN_LOST = '41';
+
   static PAYMENT_MEAN_STOLEN = '43';
+
   static CREDIT_UNAVAILABLE = '51';
+
   // static PAYMENT_MEAN_EXPIRED = '54';
   static PAYMENT_MEAN_MISSING = '56';
+
   static TRANSACTION_UNAUTHORIZED = '57';
+
   static TRANSACTION_FORBIDDEN = '58';
+
   // static FRAUD_SUSPECTED = '59';
   static CONTACT_ACQUIRER = '60';
+
   static EXCEEDED_AMOUNT_LIMIT = '61';
+
   static AWAITING_PAYMENT_CONFIRMATION = '62';
+
   static NOT_SECURITY_COMPLIANT = '63';
+
   static DAILY_TRANSACTION_LIMIT_EXCEEDED = '65';
+
   static MISSING_RESPONSE = '68';
+
   static MAX_ATTEMPTS_REACHED = '75';
+
   static TERMINAL_UNKNOWN = '87';
+
   static SYSTEM_STOPPED = '90';
+
   static ISSUER_INACCESSIBLE = '91';
+
   static INCOMPLETE_TRANSACTION_INFO = '92';
+
   static DUPLICATE_TRANSACTION = '94';
+
   static SYSTEM_MALFUNCTION = '96';
+
   static TIMEFRAME_EXCEEDED = '97';
+
   static SERVER_UNAVAILABLE = '98';
+
   static INITIATOR_DOMAIN_INCIDENT = '99';
 }

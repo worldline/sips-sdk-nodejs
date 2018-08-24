@@ -48,8 +48,8 @@ const getSealStringForInitializationResponse = (initializationResponse) => {
 };
 
 export default class SealCalculator {
-  static getSealString = object => (object instanceof PaymentRequest ?
-    getSealStringForPaymentRequest(object) : getSealStringForInitializationResponse(object));
+  static getSealString = object => (object instanceof PaymentRequest
+    ? getSealStringForPaymentRequest(object) : getSealStringForInitializationResponse(object));
 
   static calculateSeal = (sealString, secretKey) => hmacSHA256(sealString, secretKey).toString();
 }

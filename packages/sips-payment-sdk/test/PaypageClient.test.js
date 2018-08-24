@@ -1,8 +1,10 @@
-/* eslint-disable import/no-extraneous-dependencies
-   eslint-disable max-len */
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable max-len */
 import assert from 'assert';
 import { beforeEach, describe, it } from 'mocha';
-import { Currency, Environment, InitializationResponse, OrderChannel, PaymentRequest, RedirectionStatusCode } from '@worldline/sips-payment-dom';
+import {
+  Currency, Environment, InitializationResponse, OrderChannel, PaymentRequest, RedirectionStatusCode,
+} from '@worldline/sips-payment-dom';
 import PaypageClient from '../src/PaypageClient';
 
 describe('PaypageClient.js', () => {

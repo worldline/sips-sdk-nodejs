@@ -1,1 +1,1 @@
-export const INTERFACE_VERSION = 'IR_WS_2.19';
+export default 'IR_WS_2.19';

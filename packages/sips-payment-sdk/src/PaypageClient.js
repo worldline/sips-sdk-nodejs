@@ -1,6 +1,8 @@
 import axios from 'axios';
 import sha256 from 'crypto-js/sha256';
-import { PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData } from '@worldline/sips-payment-dom';
+import {
+  PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData,
+} from '@worldline/sips-payment-dom';
 import SealCalculator from './SealCalculator';
 
 const numberFields = ['amount', 'captureDay'];
@@ -9,7 +11,7 @@ const dateFields = ['captureLimitData', 'transactionDateTime'];
 const mapToResponseData = values => Object.assign(new ResponseData(), ...values.map(([k, v]) => {
   if (numberFields.includes(k)) {
     return { [k]: Number.parseInt(v, 10) };
-  } else if (dateFields.includes(k)) {
+  } if (dateFields.includes(k)) {
     return { [k]: Date.parse(v) };
   }
   return { [k]: v };
@@ -17,8 +19,8 @@ const mapToResponseData = values => Object.assign(new ResponseData(), ...values.
 
 const verifyInitializationResponse = (initializationResponse, secretKey) => {
   if (initializationResponse.seal !== undefined) {
-    const correctSeal =
-      SealCalculator.calculateSeal(SealCalculator.getSealString(initializationResponse), secretKey);
+    const correctSeal = SealCalculator
+      .calculateSeal(SealCalculator.getSealString(initializationResponse), secretKey);
     if (correctSeal !== initializationResponse.seal) {
       throw new Error('Initialization response has been tampered with!');
     }
@@ -34,8 +36,11 @@ const verifyPaypageResponse = (data, seal, secretKey) => {
 
 export default class PaypageClient {
   environment;
+
   keyVersion;
+
   merchantId;
+
   secretKey;
 
   constructor(environment, merchantId, keyVersion, secretKey) {
@@ -65,8 +70,8 @@ export default class PaypageClient {
     const requestToMake = paymentRequest;
     requestToMake.merchantId = this.merchantId;
     requestToMake.keyVersion = this.keyVersion;
-    requestToMake.seal =
-      SealCalculator.calculateSeal(SealCalculator.getSealString(paymentRequest), this.secretKey);
+    requestToMake.seal = SealCalculator
+      .calculateSeal(SealCalculator.getSealString(paymentRequest), this.secretKey);
 
     return axios.post(this.environment, JSON.stringify(requestToMake), {
       headers: { 'Content-Type': 'application/json' },
