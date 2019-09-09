@@ -20,21 +20,21 @@ describe('SealCalculator.js', () => {
     it('should pass', () => {
       const actual = SealCalculator.getSealString(paymentRequest);
       const expected = '10http://test.comcustomerIdIR_WS_2.19customCSS.css';
-      assert.equal(actual, expected, 'Sealstring is incorrect!');
+      assert.strictEqual(actual, expected, 'Sealstring is incorrect!');
     });
 
     it('should handle currency', () => {
       paymentRequest.currency = Currency.EUR;
       const actual = SealCalculator.getSealString(paymentRequest);
       const expected = '10http://test.com978customerIdIR_WS_2.19customCSS.css';
-      assert.equal(actual, expected, 'Sealstring is incorrect!');
+      assert.strictEqual(actual, expected, 'Sealstring is incorrect!');
     });
 
     it('should handle arrays', () => {
       paymentRequest.paymentMeanBrandList = [PaymentMeanBrand.BCMC, PaymentMeanBrand.VISA];
       const actual = SealCalculator.getSealString(paymentRequest);
       const expected = '10http://test.comcustomerIdIR_WS_2.19BCMCVISAcustomCSS.css';
-      assert.equal(actual, expected, 'Sealstring is incorrect!');
+      assert.strictEqual(actual, expected, 'Sealstring is incorrect!');
     });
 
     it('should handle containers', () => {
@@ -45,21 +45,21 @@ describe('SealCalculator.js', () => {
       paymentRequest.customerContact = customerContact;
       const actual = SealCalculator.getSealString(paymentRequest);
       const expected = '10http://test.comfirstnamelastnamecustomerIdIR_WS_2.19customCSS.css';
-      assert.equal(actual, expected, 'Sealstring is incorrect!');
+      assert.strictEqual(actual, expected, 'Sealstring is incorrect!');
     });
 
     it('should ignore specified fields', () => {
       paymentRequest.keyVersion = 200;
       const actual = SealCalculator.getSealString(paymentRequest);
       const expected = '10http://test.comcustomerIdIR_WS_2.19customCSS.css';
-      assert.equal(actual, expected, 'Sealstring is incorrect!');
+      assert.strictEqual(actual, expected, 'Sealstring is incorrect!');
     });
   });
   describe('calculateSeal', () => {
     it('should pass', () => {
       const actual = SealCalculator.calculateSeal('This is a test!', 'superSafeSecretKey');
       const expected = '198e5f278e3f8548e174e84492953c4871732278b7e2aa2cbf20bb1ab85914ea';
-      assert.equal(actual, expected);
+      assert.strictEqual(actual, expected);
     });
     it('should pass payment page responses', () => {
       it('should pass', () => {
@@ -72,7 +72,7 @@ describe('SealCalculator.js', () => {
 
         const sealString = SealCalculator.getSealString(initializationResponse);
         const actual = SealCalculator.calculateSeal(sealString, '002001000000002_KEY1');
-        assert.equal('dd6eb8dd6c951b1ddc1af121007aaabe8ad4fda1d15ce386cfa455821d602025', actual, 'Encoded seal is incorrect!');
+        assert.strictEqual('dd6eb8dd6c951b1ddc1af121007aaabe8ad4fda1d15ce386cfa455821d602025', actual, 'Encoded seal is incorrect!');
       });
     });
   });

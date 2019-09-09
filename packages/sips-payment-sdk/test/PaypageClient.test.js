@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable max-len */
 import assert from 'assert';
 import { beforeEach, describe, it } from 'mocha';
 import {
@@ -25,8 +23,8 @@ describe('PaypageClient.js', () => {
       paypageClient
         .initializePayment(paymentRequest)
         .then((result) => {
-          assert.equal(true, result instanceof InitializationResponse, 'Response data could not be mapped!');
-          assert.equal(result.redirectionStatusCode, RedirectionStatusCode.TRANSACTION_INITIALIZED, 'Response is not successful!');
+          assert.strictEqual(true, result instanceof InitializationResponse, 'Response data could not be mapped!');
+          assert.strictEqual(result.redirectionStatusCode, RedirectionStatusCode.TRANSACTION_INITIALIZED, 'Response is not successful!');
           done();
         }).catch(err => done(err));
     });
