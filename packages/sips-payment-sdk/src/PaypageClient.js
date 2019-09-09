@@ -1,5 +1,5 @@
 import axios from 'axios';
-import sha256 from 'crypto-js/sha256';
+import crypto from 'crypto';
 import {
   PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData,
 } from '@worldline/sips-payment-dom';
@@ -28,7 +28,7 @@ const verifyInitializationResponse = (initializationResponse, secretKey) => {
 };
 
 const verifyPaypageResponse = (data, seal, secretKey) => {
-  const correctSeal = sha256(data + secretKey).toString();
+  const correctSeal = crypto.createHash('sha256').update(`${data}${secretKey}`, 'utf8').digest('hex');
   if (correctSeal !== seal) {
     throw new Error('Paypage response has been tampered with!');
   }

@@ -1,4 +1,4 @@
-import hmacSHA256 from 'crypto-js/hmac-sha256';
+import crypto from 'crypto';
 import { PaymentRequest } from '@worldline/sips-payment-dom';
 
 const sortAndFilterFunctionsFromEntries = entries => entries
@@ -51,5 +51,5 @@ export default class SealCalculator {
   static getSealString = object => (object instanceof PaymentRequest
     ? getSealStringForPaymentRequest(object) : getSealStringForInitializationResponse(object));
 
-  static calculateSeal = (sealString, secretKey) => hmacSHA256(sealString, secretKey).toString();
+  static calculateSeal = (sealString, secretKey) => crypto.createHmac('sha256', secretKey).update(sealString).digest('hex');
 }

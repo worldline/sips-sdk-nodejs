@@ -1,16 +1,16 @@
 {
   "name": "@worldline/sips-payment-dom",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Common objects for the Worldline SIPS 2.0 API",
-  "main": "index.js",
+  "main": "dist/sips-payment-dom.js",
   "keywords": [
     "worldline",
     "sips",
     "payments"
   ],
   "scripts": {
-    "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && rollup -c",
+    "prebuild": "shx rm -rf dist && mkdir dist",
+    "build": "rollup -c",
     "lint": "eslint src"
   },
   "author": "Worldline",
