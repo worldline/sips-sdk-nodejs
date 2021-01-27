@@ -1,17 +1,9 @@
 {
-  "name": "@worldline/sips-sdk-nodejs",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "author": "Worldline",
+  "name": "@worldline/sips-payment-sdk",
+  "description": "Library to interact with the Worldline Sips 2.0 API",
   "license": "MIT",
-  "description": "This package provides a Node.js implementation for SIPS, the Worldline e-payments gateway.",
-  "scripts": {
-    "build": "lerna run build",
-    "lint": "lerna run lint",
-    "test": "lerna run test"
-  },
+  "author": "Worldline",
+  "homepage": "https://github.com/worldline/sips-sdk-nodejs/#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/worldline/sips-sdk-nodejs.git"
@@ -19,7 +11,17 @@
   "bugs": {
     "url": "https://github.com/worldline/sips-sdk-nodejs/issues"
   },
-  "homepage": "https://github.com/worldline/sips-sdk-nodejs/#readme",
+  "version": "1.1.0",
+  "main": "dist/sips-payment-sdk.js",
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "rollup -c",
+    "lint": "eslint src",
+    "test": "mocha --reporter progress --require @babel/register **/*.test.js"
+  },
+  "dependencies": {
+    "axios": "0.19.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -28,13 +30,17 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.3.0",
     "eslint-plugin-node": "^10.0.0",
-    "lerna": "^3.16.4",
     "mocha": "^6.2.0",
     "rollup": "^1.21.2",
     "rollup-plugin-babel": "^4.3.3",
     "shx": "^0.3.2"
   },
+  "keywords": [
+    "payments",
+    "sips",
+    "worldline"
+  ],
   "engines": {
-    "node": ">=6.15.0"
+    "node": ">=8.0.0"
   }
 }

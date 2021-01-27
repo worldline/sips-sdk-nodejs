@@ -2,7 +2,7 @@ import axios from 'axios';
 import crypto from 'crypto';
 import {
   PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData,
-} from '@worldline/sips-payment-dom';
+} from './models';
 import SealCalculator from './SealCalculator';
 
 const numberFields = ['amount', 'captureDay'];

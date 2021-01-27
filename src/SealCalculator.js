@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { PaymentRequest } from '@worldline/sips-payment-dom';
+import { PaymentRequest } from './common/';
 
 const sortAndFilterFunctionsFromEntries = entries => entries
   .filter(entry => typeof entry[1] !== 'function' && typeof entry[1] !== 'undefined' && entry[1] !== null)
