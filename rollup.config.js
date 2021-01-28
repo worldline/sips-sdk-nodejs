@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
 
 const config = [{
   input: 'src/index.js',
@@ -6,9 +6,9 @@ const config = [{
     file: 'dist/sips-payment-sdk.js',
     format: 'cjs',
   },
-  external: ['axios', '@worldline/sips-payment-dom'],
+  external: ['axios', 'crypto'],
   plugins: [
-   babel(),
+   commonjs(),
   ],
 }];
 
