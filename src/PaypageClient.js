@@ -1,5 +1,5 @@
-const axios = require('axios');
 const crypto = require('crypto');
+const https = require('https');
 
 const {
   PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData,
@@ -75,12 +75,56 @@ module.exports = class PaypageClient {
     requestToMake.seal = SealCalculator
       .calculateSeal(SealCalculator.getSealString(paymentRequest), this.secretKey);
 
-    return axios.post(this.environment, JSON.stringify(requestToMake), {
-      headers: { 'Content-Type': 'application/json' },
-    }).then((response) => {
-      const initializationResponse = Object.assign(new InitializationResponse(), response.data);
-      verifyInitializationResponse(initializationResponse, this.secretKey);
-      return initializationResponse;
+    const options = {
+      hostname: this.environment,
+      port: 443,
+      path: '/rs-services/v2/paymentInit',
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }
+
+    return new Promise((resolve, reject) => {
+
+      const clientRequest = https.request(options, incomingMessage => {
+
+        // Response object.
+        let response = {
+          statusCode: incomingMessage.statusCode,
+          headers: incomingMessage.headers,
+          body: []
+        };
+
+        if (response.statusCode !== 200) {
+         reject(new Error(`Status code is ${response.statusCode}`));
+        }
+
+        // Collect response body data.
+        incomingMessage.on('data', chunk => {
+          response.body.push(chunk);
+        });
+
+        // Resolve on end.
+        incomingMessage.on('end', () => {
+          response.body = response.body.join();
+          console.log(JSON.parse(response.body));
+          const initializationResponse = Object.assign(new InitializationResponse(), JSON.parse(response.body));
+          verifyInitializationResponse(initializationResponse, this.secretKey);
+          resolve(initializationResponse);
+        });
+      });
+
+      // Reject on request error.
+      clientRequest.on('error', error => {
+        reject(error);
+      });
+
+      // Write request body if present.
+      clientRequest.write(JSON.stringify(requestToMake));
+
+      // Close HTTP connection.
+      clientRequest.end();
     });
   };
 
