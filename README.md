@@ -24,8 +24,7 @@ The example below uses ES6's syntax. To run on any Node.js, code should be trans
 ### Initialization
 First, create a client for the desired environment using your merchant ID, key version & secret key:
 ```js
-const { PaypageClient } = require('@worldline/sips-payment-sdk');
-const { Environment } = require('@worldline/sips-payment-dom');
+const { Environment, PaypageClient } = require('@worldline/sips-payment-sdk');
 
 const paypageClient = new PaypageClient(
   Environment.TEST,
@@ -34,10 +33,10 @@ const paypageClient = new PaypageClient(
   '002001000000001_KEY1'); // ...and neither should this.
 ```
 
-Then set up a request to initalize a session on the SIPS server:
+Then set up a request to initialize a session on the SIPS server:
 
 ```js
-const { PaymentRequest, Currency, OrderChannel } = require('@worldline/sips-payment-dom');
+const { PaymentRequest, Currency, OrderChannel } = require('@worldline/sips-payment-sdk');
 
 const paymentRequest = new PaymentRequest();
 paymentRequest.amount = 2;
