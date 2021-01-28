@@ -1,7 +1,7 @@
-module.exports = class GuaranteeIndicator {
-  static Y = 'Y';
+module.exports = Object.freeze({
+  Y: 'Y',
 
-  static N = 'N';
+  N: 'N',
 
-  static U = 'U';
-};
+  U: 'U',
+});

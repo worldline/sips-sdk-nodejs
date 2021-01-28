@@ -1,63 +1,63 @@
-module.exports = class Language {
-  static BULGARIAN = 'bg';
+module.exports = Object.freeze({
+  BULGARIAN: 'bg',
 
-  static BRETON = 'br';
+  BRETON: 'br',
 
-  static CZECH = 'cs';
+  CZECH: 'cs',
 
-  static DANISH = 'da';
+  DANISH: 'da',
 
-  static GERMAN = 'de';
+  GERMAN: 'de',
 
-  static GREEK = 'el';
+  GREEK: 'el',
 
-  static ENGLISH = 'en';
+  ENGLISH: 'en',
 
-  static SPANISH = 'es';
+  SPANISH: 'es',
 
-  static ESTONIAN = 'et';
+  ESTONIAN: 'et',
 
-  static FINNISH = 'fi';
+  FINNISH: 'fi',
 
-  static FRENCH = 'fr';
+  FRENCH: 'fr',
 
-  static HINDI = 'hi';
+  HINDI: 'hi',
 
-  static CROATIAN = 'hr';
+  CROATIAN: 'hr',
 
-  static HUNGARIAN = 'hu';
+  HUNGARIAN: 'hu',
 
-  static ITALIAN = 'it';
+  ITALIAN: 'it',
 
-  static JAPANESE = 'ja';
+  JAPANESE: 'ja',
 
-  static KOREAN = 'ko';
+  KOREAN: 'ko',
 
-  static LITHUANIAN = 'lt';
+  LITHUANIAN: 'lt',
 
-  static LATVIAN = 'lv';
+  LATVIAN: 'lv',
 
-  static DUTCH = 'nl';
+  DUTCH: 'nl',
 
-  static NORWEGIAN = 'no';
+  NORWEGIAN: 'no',
 
-  static POLISH = 'pl';
+  POLISH: 'pl',
 
-  static PORTUGUESE = 'pt';
+  PORTUGUESE: 'pt',
 
-  static ROMANIAN = 'ro';
+  ROMANIAN: 'ro',
 
-  static RUSSIAN = 'ru';
+  RUSSIAN: 'ru',
 
-  static SLOVAK = 'sk';
+  SLOVAK: 'sk',
 
-  static SLOVENE = 'sl';
+  SLOVENE: 'sl',
 
-  static SWEDISH = 'sv';
+  SWEDISH: 'sv',
 
-  static TURKISH = 'tr';
+  TURKISH: 'tr',
 
-  static UKRAINIAN = 'uk';
+  UKRAINIAN: 'uk',
 
-  static CHINESE = 'zh';
-};
+  CHINESE: 'zh',
+});

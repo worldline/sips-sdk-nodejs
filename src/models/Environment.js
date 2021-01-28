@@ -1,7 +1,7 @@
-module.exports = class Environment {
-  static SIMU = 'payment-webinit.simu.sips-atos.com';
+module.exports = Object.freeze({
+  SIMU: 'payment-webinit.simu.sips-atos.com',
 
-  static TEST = 'payment-webinit.test.sips-atos.com';
+  TEST: 'payment-webinit.test.sips-atos.com',
 
-  static PROD = 'payment-webinit.sips-atos.com';
-};
+  PROD: 'payment-webinit.sips-atos.com',
+});

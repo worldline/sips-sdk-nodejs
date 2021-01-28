@@ -1,7 +1,7 @@
-module.exports = class OrderChannel {
-  static INAPP = 'INAPP';
+module.exports = Object.freeze({
+  INAPP: 'INAPP',
 
-  static INTERNET = 'INTERNET';
+  INTERNET: 'INTERNET',
 
-  static MOTO = 'MOTO';
-};
+  MOTO: 'MOTO',
+});

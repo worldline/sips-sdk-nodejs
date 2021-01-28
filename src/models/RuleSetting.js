@@ -1,9 +1,9 @@
-module.exports = class RuleSetting {
-  static D = 'D';
+module.exports = Object.freeze({
+  D: 'D',
 
-  static I = 'I';
+  I: 'I',
 
-  static N = 'N';
+  N: 'N',
 
-  static S = 'S';
-};
+  S: 'S',
+});

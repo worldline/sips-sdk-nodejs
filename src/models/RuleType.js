@@ -1,5 +1,5 @@
-module.exports = class RuleType {
-  static G = 'G';
+module.exports = Object.freeze({
+  G: 'G',
 
-  static N = 'N';
-};
+  N: 'N',
+});

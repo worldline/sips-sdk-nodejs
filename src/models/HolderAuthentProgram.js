@@ -1,11 +1,11 @@
-module.exports = class HolderAuthentProgram {
-  static ONE_EUROCOM = '1EUROCOM';
+module.exports = Object.freeze({
+  ONE_EUROCOM: '1EUROCOM',
 
-  static THREE_DS = '3DS';
+  THREE_DS: '3DS',
 
-  static ARP = 'ARP';
+  ARP: 'ARP',
 
-  static BCMCMOBILE = 'BCMCMOBILE';
+  BCMCMOBILE: 'BCMCMOBILE',
 
-  static MASTERPASS = 'MASTERPASS';
-};
+  MASTERPASS: 'MASTERPASS',
+});

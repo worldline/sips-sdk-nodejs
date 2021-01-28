@@ -1,7 +1,7 @@
-module.exports = class CaptureMode {
-  static AUTHOR_CAPTURE = 'AUTHOR_CAPTURE';
+module.exports = Object.freeze({
+  AUTHOR_CAPTURE: 'AUTHOR_CAPTURE',
 
-  static IMMEDIATE = 'IMMEDIATE';
+  IMMEDIATE: 'IMMEDIATE',
 
-  static VALIDATION = 'VALIDATION';
-};
+  VALIDATION: 'VALIDATION',
+});

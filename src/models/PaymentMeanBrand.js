@@ -1,31 +1,31 @@
-module.exports = class PaymentMeanBrand {
-  static AMEX = 'AMEX';
+module.exports = Object.freeze({
+  AMEX: 'AMEX',
 
-  static BCMC = 'BCMC';
+  BCMC: 'BCMC',
 
-  static CBCONLINE = 'CBCONLINE';
+  CBCONLINE: 'CBCONLINE',
 
-  static ELV = 'ELV';
+  ELV: 'ELV',
 
-  static IDEAL = 'IDEAL';
+  IDEAL: 'IDEAL',
 
-  static IGNHOMEPAY = 'IGNHOMEPAY';
+  IGNHOMEPAY: 'IGNHOMEPAY',
 
-  static KBCONLINE = 'KBCONLINE';
+  KBCONLINE: 'KBCONLINE',
 
-  static MAESTRO = 'MAESTRO';
+  MAESTRO: 'MAESTRO',
 
-  static MASTERCARD = 'MASTERCARD';
+  MASTERCARD: 'MASTERCARD',
 
-  static MASTERPASS = 'MASTERPASS';
+  MASTERPASS: 'MASTERPASS',
 
-  static PAYPAL = 'PAYPAL';
+  PAYPAL: 'PAYPAL',
 
-  static PAYTRAIL = 'PAYTRAIL';
+  PAYTRAIL: 'PAYTRAIL',
 
-  static SOFORTUBERWEISUNG = 'SOFORTUBERWEISUNG';
+  SOFORTUBERWEISUNG: 'SOFORTUBERWEISUNG',
 
-  static VISA = 'VISA';
+  VISA: 'VISA',
 
-  static VPAY = 'VPAY';
-};
+  VPAY: 'VPAY',
+});

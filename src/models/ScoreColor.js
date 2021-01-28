@@ -1,11 +1,11 @@
-module.exports = class ScoreColor {
-  static BLACK = 'BLACK';
+module.exports = Object.freeze({
+  BLACK: 'BLACK',
 
-  static GREEN = 'GREEN';
+  GREEN: 'GREEN',
 
-  static ORANGE = 'ORANGE';
+  ORANGE: 'ORANGE',
 
-  static RED = 'RED';
+  RED: 'RED',
 
-  static WHITE = 'WHITE';
-};
+  WHITE: 'WHITE',
+});

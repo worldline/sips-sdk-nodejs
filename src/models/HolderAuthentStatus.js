@@ -1,35 +1,35 @@
-module.exports = class HolderAuthentStatus {
-  static ATTEMPT = 'ATTEMPT';
+module.exports = Object.freeze({
+  ATTEMPT: 'ATTEMPT',
 
-  static THREE_D_ATTEMPT = '3D_ATTEMPT';
+  THREE_D_ATTEMPT: '3D_ATTEMPT',
 
-  static BYPASS = 'BYPASS';
+  BYPASS: 'BYPASS',
 
-  static THREE_D_BYPASS = '3D_BYPASS';
+  THREE_D_BYPASS: '3D_BYPASS',
 
-  static CANCEL = 'CANCEL';
+  CANCEL: 'CANCEL',
 
-  static THREE_D_ABORT = '3D_ABORT';
+  THREE_D_ABORT: '3D_ABORT',
 
-  static ERROR = 'ERROR';
+  ERROR: 'ERROR',
 
-  static THREE_D_ERROR = '3D_ERROR';
+  THREE_D_ERROR: '3D_ERROR',
 
-  static FAILURE = 'FAILURE';
+  FAILURE: 'FAILURE',
 
-  static THREE_D_FAILURE = '3D_FAILURE';
+  THREE_D_FAILURE: '3D_FAILURE',
 
-  static NO_AUTHENT = 'NO_AUTHENT';
+  NO_AUTHENT: 'NO_AUTHENT',
 
-  static SSL = 'SSL';
+  SSL: 'SSL',
 
-  static NOT_ENROLLED = 'NOT_ENROLLED';
+  NOT_ENROLLED: 'NOT_ENROLLED',
 
-  static THREE_D_NOTENROLLED = '3D_NOTENROLLED';
+  THREE_D_NOTENROLLED: '3D_NOTENROLLED',
 
-  static NOT_PARTICIPATING = 'NOT_PARTICIPATING';
+  NOT_PARTICIPATING: 'NOT_PARTICIPATING',
 
-  static SUCCESS = 'SUCCESS';
+  SUCCESS: 'SUCCESS',
 
-  static THREE_D_SUCCESS = '3D_SUCCESS';
-};
+  THREE_D_SUCCESS: '3D_SUCCESS',
+});

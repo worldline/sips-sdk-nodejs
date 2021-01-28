@@ -1,9 +1,9 @@
-module.exports = class WalletType {
-  static BCMCMOBILE = 'BCMCMOBILE';
+module.exports = Object.freeze({
+  BCMCMOBILE: 'BCMCMOBILE',
 
-  static MASTERPASS = 'MASTERPASS';
+  MASTERPASS: 'MASTERPASS',
 
-  static MERCHANT_WALLET = 'MERCHANT_WALLET';
+  MERCHANT_WALLET: 'MERCHANT_WALLET',
 
-  static PAYLIB = 'PAYLIB';
-};
+  PAYLIB: 'PAYLIB',
+});

@@ -1,17 +1,17 @@
-module.exports = class RuleResultIndicator {
-  static B = 'B';
+module.exports = Object.freeze({
+  B: 'B',
 
-  static D = 'D';
+  D: 'D',
 
-  static E = 'E';
+  E: 'E',
 
-  static N = 'N';
+  N: 'N',
 
-  static P = 'P';
+  P: 'P',
 
-  static U = 'U';
+  U: 'U',
 
-  static X = 'X';
+  X: 'X',
 
-  static ZERO = '0';
-};
+  ZERO: '0',
+});

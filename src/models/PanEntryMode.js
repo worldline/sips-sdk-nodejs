@@ -1,7 +1,7 @@
-module.exports = class PanEntryMode {
-  static MANUAL = 'MANUAL';
+module.exports = Object.freeze({
+  MANUAL: 'MANUAL',
 
-  static VIRTUAL = 'VIRTUAL';
+  VIRTUAL: 'VIRTUAL',
 
-  static WALLET = 'WALLET';
-};
+  WALLET: 'WALLET',
+});
