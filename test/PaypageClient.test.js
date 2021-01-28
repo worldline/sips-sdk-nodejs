@@ -1,7 +1,12 @@
 const assert = require('assert');
 const { beforeEach, describe, it } = require('mocha');
 const {
-  Currency, Environment, InitializationResponse, OrderChannel, PaymentRequest, RedirectionStatusCode,
+  Currency,
+  Environment,
+  InitializationResponse,
+  OrderChannel,
+  PaymentRequest,
+  RedirectionStatusCode,
 } = require('../src/models');
 const PaypageClient = require('../src/PaypageClient');
 
@@ -23,11 +28,10 @@ describe('PaypageClient.js', () => {
       paypageClient
         .initializePayment(paymentRequest)
         .then((result) => {
-          //console.log(result);
           assert.strictEqual(true, result instanceof InitializationResponse, 'Response data could not be mapped!');
           assert.strictEqual(result.redirectionStatusCode, RedirectionStatusCode.TRANSACTION_INITIALIZED, 'Response is not successful!');
           done();
-        }).catch(err => done(err));
+        }).catch((err) => done(err));
     });
   });
   describe('decode', () => {
