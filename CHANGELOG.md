@@ -1,6 +1,21 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.0 - [unreleased]
+:warning: Rewrote library from scratch, please review README on usage
+
+### Breaking
+- updated platform URLs
+- dropped support for NodeJS > 12
+
+### Changed
+- removed all dependencies, now using NodeJS builtins
+- rewrote ES to supported Node syntax
+- removed bundler
+
+### Added
+- support for platform release 21R1 and below
+
 ## 1.0.0-beta.1 - [2017-02-06]
 
 ### Added

@@ -1,5 +1,3 @@
-> :bulb: This package is currently in pre-release. Although it's fully functional, any feedback is welcome as we try to improve general code style & usage before graduating it to a stable version.
-
 # SIPS Payment SDK [![npm version](https://img.shields.io/npm/v/@worldline/sips-payment-sdk.svg)](https://www.npmjs.com/package/@worldline/sips-payment-sdk)
 This package provides a Node.js implementation for SIPS, the Worldline e-payments gateway.
 
@@ -8,13 +6,13 @@ This package provides a Node.js implementation for SIPS, the Worldline e-payment
 ## Installing
 
 This library is provided as two separate packages on NPM . To install it, simply run:
-```
-$ npm install sips-payment-sdk sips-payment-dom
+```shell
+npm install sips-payment-sdk
 ```
 
 Or if you prefer Yarn, run:
-```
-$ yarn add sips-payment-sdk sips-payment-dom
+```shell
+yarn add sips-payment-sdk
 ```
 
 
@@ -30,7 +28,7 @@ const { PaypageClient } = require('@worldline/sips-payment-sdk');
 const { Environment } = require('@worldline/sips-payment-dom');
 
 const paypageClient = new PaypageClient(
-  Environment.SIMU,
+  Environment.TEST,
   '002001000000001',
   1, // This shouldn't be hardcoded here...
   '002001000000001_KEY1'); // ...and neither should this.
@@ -49,7 +47,7 @@ paymentRequest.orderChannel = OrderChannel.INTERNET;
 Add unique reference for the transaction:
 
 ```js
-paymentRequest.transactionReference = 'My awesome transaction reference';
+paymentRequest.transactionReference = 'unique-transaction-ref';
 ```
 
 And initialize your session on the server:
