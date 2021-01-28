@@ -6,4 +6,4 @@ module.exports = class WalletType {
   static MERCHANT_WALLET = 'MERCHANT_WALLET';
 
   static PAYLIB = 'PAYLIB';
-}
+};

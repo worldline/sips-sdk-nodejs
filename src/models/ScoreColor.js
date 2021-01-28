@@ -8,4 +8,4 @@ module.exports = class ScoreColor {
   static RED = 'RED';
 
   static WHITE = 'WHITE';
-}
+};

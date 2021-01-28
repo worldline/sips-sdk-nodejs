@@ -12,4 +12,4 @@ module.exports = class RedirectionStatusCode {
   static DUPLICATED_TRANSACTION = '94';
 
   static INTERNAL_ERROR = '99';
-}
+};

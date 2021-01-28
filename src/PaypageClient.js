@@ -10,7 +10,7 @@ const SealCalculator = require('./SealCalculator');
 const numberFields = ['amount', 'captureDay'];
 const dateFields = ['captureLimitData', 'transactionDateTime'];
 
-const mapToResponseData = values => Object.assign(new ResponseData(), ...values.map(([k, v]) => {
+const mapToResponseData = (values) => Object.assign(new ResponseData(), ...values.map(([k, v]) => {
   if (numberFields.includes(k)) {
     return { [k]: Number.parseInt(v, 10) };
   } if (dateFields.includes(k)) {
@@ -82,41 +82,40 @@ module.exports = class PaypageClient {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-      }
-    }
+      },
+    };
 
     return new Promise((resolve, reject) => {
-
-      const clientRequest = https.request(options, incomingMessage => {
-
+      const clientRequest = https.request(options, (incomingMessage) => {
         // Response object.
-        let response = {
+        const response = {
           statusCode: incomingMessage.statusCode,
           headers: incomingMessage.headers,
-          body: []
+          body: [],
         };
 
         if (response.statusCode !== 200) {
-         reject(new Error(`Status code is ${response.statusCode}`));
+          reject(new Error(`Status code is ${response.statusCode}`));
         }
 
         // Collect response body data.
-        incomingMessage.on('data', chunk => {
+        incomingMessage.on('data', (chunk) => {
           response.body.push(chunk);
         });
 
         // Resolve on end.
         incomingMessage.on('end', () => {
           response.body = response.body.join();
-          console.log(JSON.parse(response.body));
-          const initializationResponse = Object.assign(new InitializationResponse(), JSON.parse(response.body));
+          const initializationResponse = Object.assign(
+            new InitializationResponse(), JSON.parse(response.body),
+          );
           verifyInitializationResponse(initializationResponse, this.secretKey);
           resolve(initializationResponse);
         });
       });
 
       // Reject on request error.
-      clientRequest.on('error', error => {
+      clientRequest.on('error', (error) => {
         reject(error);
       });
 
@@ -138,8 +137,8 @@ module.exports = class PaypageClient {
     paypageResponse.interfaceVersion = InterfaceVersion;
     paypageResponse.seal = Seal;
     let values = Data.split('|');
-    values = values.map(value => value.split('=', 2));
+    values = values.map((value) => value.split('=', 2));
     paypageResponse.data = mapToResponseData(values);
     return paypageResponse;
   }
-}
+};

@@ -12,4 +12,4 @@ module.exports = class Contact {
   phone;
 
   title;
-}
+};

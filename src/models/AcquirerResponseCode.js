@@ -82,4 +82,4 @@ module.exports = class AcquirerResponseCode {
   static SERVER_UNAVAILABLE = '98';
 
   static INITIATOR_DOMAIN_INCIDENT = '99';
-}
+};

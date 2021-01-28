@@ -4,4 +4,4 @@ module.exports = class PaymentMeanType {
   static CREDIT_TRANSFER = 'CREDIT_TRANSFER';
 
   static DIRECT_DEBIT = 'DIRECT_DEBIT';
-}
+};

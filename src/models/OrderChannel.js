@@ -4,4 +4,4 @@ module.exports = class OrderChannel {
   static INTERNET = 'INTERNET';
 
   static MOTO = 'MOTO';
-}
+};

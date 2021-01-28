@@ -62,4 +62,4 @@ module.exports = class ResponseData {
   transactionReference;
 
   walletType;
-}
+};

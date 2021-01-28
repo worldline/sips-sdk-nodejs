@@ -30,4 +30,4 @@ module.exports = class ResponseCode {
   static TIMEFRAME_EXCEEDED = '97';
 
   static INTERNAL_ERROR = '99';
-}
+};

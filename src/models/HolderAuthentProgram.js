@@ -8,4 +8,4 @@ module.exports = class HolderAuthentProgram {
   static BCMCMOBILE = 'BCMCMOBILE';
 
   static MASTERPASS = 'MASTERPASS';
-}
+};

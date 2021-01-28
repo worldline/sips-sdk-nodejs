@@ -8,4 +8,4 @@ module.exports = class CardCSCResultCode {
   static CRYPTOGRAM_MISSING = '53';
 
   static COULD_NOT_PREFORM = '55';
-}
+};

@@ -32,4 +32,4 @@ module.exports = class HolderAuthentStatus {
   static SUCCESS = 'SUCCESS';
 
   static THREE_D_SUCCESS = '3D_SUCCESS';
-}
+};

@@ -10,4 +10,4 @@ module.exports = class HolderAuthentMethod {
   static OTP_TELE = 'OTP_TELE';
 
   static PASSWORD = 'PASSWORD';
-}
+};

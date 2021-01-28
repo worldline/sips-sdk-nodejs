@@ -4,4 +4,4 @@ module.exports = class GuaranteeIndicator {
   static N = 'N';
 
   static U = 'U';
-}
+};

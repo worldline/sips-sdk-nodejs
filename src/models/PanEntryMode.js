@@ -4,4 +4,4 @@ module.exports = class PanEntryMode {
   static VIRTUAL = 'VIRTUAL';
 
   static WALLET = 'WALLET';
-}
+};

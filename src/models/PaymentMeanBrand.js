@@ -28,4 +28,4 @@ module.exports = class PaymentMeanBrand {
   static VISA = 'VISA';
 
   static VPAY = 'VPAY';
-}
+};

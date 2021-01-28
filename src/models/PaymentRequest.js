@@ -56,4 +56,4 @@ module.exports = class PaymentRequest {
   templateName;
 
   paypageData;
-}
+};

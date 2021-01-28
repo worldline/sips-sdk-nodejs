@@ -6,4 +6,4 @@ module.exports = class PaymentPattern {
   static RECURRING_N = 'RECURRING_N';
 
   static INSTALMENT = 'INSTALMENT';
-}
+};

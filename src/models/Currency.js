@@ -90,4 +90,4 @@ module.exports = class Currency {
   static PLN = '985';
 
   static BRL = '986';
-}
+};

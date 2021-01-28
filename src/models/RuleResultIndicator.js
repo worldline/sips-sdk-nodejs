@@ -14,4 +14,4 @@ module.exports = class RuleResultIndicator {
   static X = 'X';
 
   static ZERO = '0';
-}
+};

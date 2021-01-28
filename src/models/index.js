@@ -59,7 +59,7 @@ module.exports = {
   RuleResult,
   RuleResultIndicator,
   RuleSetting,
-  RuleType ,
+  RuleType,
   ScoreColor,
-  WalletType
-}
+  WalletType,
+};

@@ -6,4 +6,4 @@ module.exports = class CustomerContact extends Contact {
   legalId;
 
   positionOccupied;
-}
+};

@@ -4,4 +4,4 @@ module.exports = class CaptureMode {
   static IMMEDIATE = 'IMMEDIATE';
 
   static VALIDATION = 'VALIDATION';
-}
+};

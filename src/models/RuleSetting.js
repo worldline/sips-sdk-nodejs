@@ -6,4 +6,4 @@ module.exports = class RuleSetting {
   static N = 'N';
 
   static S = 'S';
-}
+};

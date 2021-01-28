@@ -60,4 +60,4 @@ module.exports = class Language {
   static UKRAINIAN = 'uk';
 
   static CHINESE = 'zh';
-}
+};

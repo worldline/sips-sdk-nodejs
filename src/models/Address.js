@@ -20,4 +20,4 @@ module.exports = class Address {
   streetNumber;
 
   zipcode;
-}
+};

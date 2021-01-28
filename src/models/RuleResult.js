@@ -10,4 +10,4 @@ module.exports = class RuleResult {
   ruleResultIndicator;
 
   ruleDetailedInfo;
-}
+};
