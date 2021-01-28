@@ -3,7 +3,7 @@
   "description": "Library to interact with the Worldline Sips 2.0 API",
   "license": "MIT",
   "author": "Worldline",
-  "homepage": "https://github.com/worldline/sips-sdk-nodejs/#readme",
+  "homepage": "https://github.com/worldline/sips-sdk-nodejs",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/worldline/sips-sdk-nodejs.git"
