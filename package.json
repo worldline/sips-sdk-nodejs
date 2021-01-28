@@ -17,10 +17,7 @@
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "rollup -c",
     "lint": "eslint src",
-    "test": "mocha --reporter progress --require @babel/register **/*.test.js"
-  },
-  "dependencies": {
-    "axios": "0.19.0"
+     "test": "mocha --reporter progress **/*.test.js"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
