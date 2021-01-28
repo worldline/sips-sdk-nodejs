@@ -1,10 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## 2.0.0 - [unreleased]
+## 2.0.0 - [2021-01-28]
 :warning: Rewrote library from scratch, please review README on usage
 
 ### Breaking
+- `paypageClient.initializePayment` now returns a promise
 - updated platform URLs
 - dropped support for NodeJS > 12
 
