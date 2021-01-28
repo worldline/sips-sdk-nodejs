@@ -52,7 +52,7 @@ paymentRequest.transactionReference = 'unique-transaction-ref';
 
 And initialize your session on the server:
 ```js
-const initializationResponse = paypageClient.initializePayment(paymentRequest);
+const initializationResponse = await paypageClient.initializePayment(paymentRequest);
 ```
 
 The `initializationResponse` you'll receive from the server contains all information needed to continue
