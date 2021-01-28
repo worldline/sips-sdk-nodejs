@@ -1,4 +1,4 @@
-export default class ScoreColor {
+module.exports = class ScoreColor {
   static BLACK = 'BLACK';
 
   static GREEN = 'GREEN';

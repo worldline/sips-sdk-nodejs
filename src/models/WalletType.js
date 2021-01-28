@@ -1,4 +1,4 @@
-export default class WalletType {
+module.exports = class WalletType {
   static BCMCMOBILE = 'BCMCMOBILE';
 
   static MASTERPASS = 'MASTERPASS';

@@ -1,1 +1,1 @@
-export default 'IR_WS_2.19';
+module.exports = 'IR_WS_2.19';

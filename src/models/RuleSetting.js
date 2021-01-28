@@ -1,4 +1,4 @@
-export default class RuleSetting {
+module.exports = class RuleSetting {
   static D = 'D';
 
   static I = 'I';

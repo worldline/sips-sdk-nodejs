@@ -1,4 +1,4 @@
-export default class HolderAuthentStatus {
+module.exports = class HolderAuthentStatus {
   static ATTEMPT = 'ATTEMPT';
 
   static THREE_D_ATTEMPT = '3D_ATTEMPT';

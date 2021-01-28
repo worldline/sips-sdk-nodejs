@@ -1,4 +1,4 @@
-export default class ResponseCode {
+module.exports = class ResponseCode {
   static ACCEPTED = '00';
 
   static CARD_CEILING_EXCEEDED = '02';

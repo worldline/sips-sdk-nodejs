@@ -1,4 +1,4 @@
-export default class PaypageResponse {
+module.exports = class PaypageResponse {
   data;
 
   encode;

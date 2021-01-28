@@ -1,4 +1,4 @@
-export default class RedirectionStatusCode {
+module.exports = class RedirectionStatusCode {
   static TRANSACTION_INITIALIZED = '00';
 
   static INVALID_MERCHANT_CONTRACT = '03';

@@ -1,4 +1,4 @@
-export default class PanEntryMode {
+module.exports = class PanEntryMode {
   static MANUAL = 'MANUAL';
 
   static VIRTUAL = 'VIRTUAL';

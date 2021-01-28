@@ -1,4 +1,4 @@
-export default class RuleResult {
+module.exports = class RuleResult {
   ruleCode;
 
   ruleType;

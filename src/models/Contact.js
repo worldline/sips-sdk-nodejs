@@ -1,4 +1,4 @@
-export default class Contact {
+module.exports = class Contact {
   email;
 
   firstname;

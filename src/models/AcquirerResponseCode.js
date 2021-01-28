@@ -1,4 +1,4 @@
-export default class AcquirerResponseCode {
+module.exports = class AcquirerResponseCode {
   static TRANSACTION_SUCCESS = '00';
 
   static CONTACT_ISSUER = '02';

@@ -1,4 +1,4 @@
-export default class HolderAuthentMethod {
+module.exports = class HolderAuthentMethod {
   static NO_AUTHENT = 'NO_AUTHENT';
 
   static NO_AUTHENT_METHOD = 'NO_AUTHENT_METHOD';

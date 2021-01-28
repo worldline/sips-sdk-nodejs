@@ -1,4 +1,4 @@
-export default class OrderChannel {
+module.exports = class OrderChannel {
   static INAPP = 'INAPP';
 
   static INTERNET = 'INTERNET';

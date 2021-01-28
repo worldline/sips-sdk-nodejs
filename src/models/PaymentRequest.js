@@ -1,6 +1,6 @@
-import INTERFACE_VERSION from './config';
+const INTERFACE_VERSION = require('./config');
 
-export default class PaymentRequest {
+module.exports = class PaymentRequest {
   interfaceVersion = INTERFACE_VERSION;
 
   paymentMeanBrandList;

@@ -1,4 +1,4 @@
-export default class InitializationResponse {
+module.exports = class InitializationResponse {
   errorFieldName;
 
   redirectionData;

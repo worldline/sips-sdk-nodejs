@@ -1,9 +1,11 @@
-import axios from 'axios';
-import crypto from 'crypto';
-import {
+const axios = require('axios');
+const crypto = require('crypto');
+
+const {
   PaymentRequest, InitializationResponse, Environment, PaypageResponse, ResponseData,
-} from './models';
-import SealCalculator from './SealCalculator';
+} = require('./models');
+
+const SealCalculator = require('./SealCalculator');
 
 const numberFields = ['amount', 'captureDay'];
 const dateFields = ['captureLimitData', 'transactionDateTime'];
@@ -34,7 +36,7 @@ const verifyPaypageResponse = (data, seal, secretKey) => {
   }
 };
 
-export default class PaypageClient {
+module.exports = class PaypageClient {
   environment;
 
   keyVersion;

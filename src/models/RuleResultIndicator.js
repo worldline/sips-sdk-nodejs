@@ -1,4 +1,4 @@
-export default class RuleResultIndicator {
+module.exports = class RuleResultIndicator {
   static B = 'B';
 
   static D = 'D';

@@ -1,4 +1,4 @@
-export default class Language {
+module.exports = class Language {
   static BULGARIAN = 'bg';
 
   static BRETON = 'br';

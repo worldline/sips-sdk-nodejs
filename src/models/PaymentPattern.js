@@ -1,4 +1,4 @@
-export default class PaymentPattern {
+module.exports = class PaymentPattern {
   static ONE_SHOT = 'ONE_SHOT';
 
   static RECURRING_1 = 'RECURRING_1';

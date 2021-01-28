@@ -1,4 +1,4 @@
-export default class CardCSCResultCode {
+module.exports = class CardCSCResultCode {
   static INCORRECT_CRYPTOGRAM = '4E';
 
   static CORRECT_CRYPTOGRAM = '4D';

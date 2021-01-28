@@ -1,4 +1,4 @@
-export default class PaymentMeanType {
+module.exports = class PaymentMeanType {
   static CARD = 'CARD';
 
   static CREDIT_TRANSFER = 'CREDIT_TRANSFER';

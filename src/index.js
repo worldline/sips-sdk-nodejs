@@ -1,2 +1,6 @@
-export { default as PaypageClient } from './PaypageClient';
-export { default as SealCalculator } from './SealCalculator';
+const PaypageClient = require('./PaypageClient');
+const SealCalculator = require('./SealCalculator');
+
+module.exports = {
+  PaypageClient, SealCalculator
+}

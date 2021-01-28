@@ -1,11 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable max-len */
-import assert from 'assert';
-import { beforeEach, describe, it } from 'mocha';
+const assert = require('assert');
+const { beforeEach, describe, it } = require('mocha');
 import {
   InitializationResponse, PaymentRequest, Currency, PaymentMeanBrand, CustomerContact, RedirectionStatusCode,
 } from '@worldline/sips-payment-dom';
-import SealCalculator from '../src/SealCalculator';
+const SealCalculator = require('../src/SealCalculator');
 
 describe('SealCalculator.js', () => {
   let paymentRequest;

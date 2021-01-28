@@ -1,5 +1,5 @@
-import crypto from 'crypto';
-import { PaymentRequest } from './common/';
+const crypto = require('crypto');
+const { PaymentRequest } = require('./models/');
 
 const sortAndFilterFunctionsFromEntries = entries => entries
   .filter(entry => typeof entry[1] !== 'function' && typeof entry[1] !== 'undefined' && entry[1] !== null)
@@ -47,9 +47,8 @@ const getSealStringForInitializationResponse = (initializationResponse) => {
   return sealString;
 };
 
-export default class SealCalculator {
-  static getSealString = object => (object instanceof PaymentRequest
-    ? getSealStringForPaymentRequest(object) : getSealStringForInitializationResponse(object));
-
-  static calculateSeal = (sealString, secretKey) => crypto.createHmac('sha256', secretKey).update(sealString).digest('hex');
+module.exports = {
+  getSealString: object => (object instanceof PaymentRequest
+    ? getSealStringForPaymentRequest(object) : getSealStringForInitializationResponse(object)),
+  calculateSeal: (sealString, secretKey) => crypto.createHmac('sha256', secretKey).update(sealString).digest('hex'),
 }

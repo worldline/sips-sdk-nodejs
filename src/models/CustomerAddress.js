@@ -1,5 +1,5 @@
-import Address from './Address';
+const Address = require('./Address');
 
-export default class CustomerAddress extends Address {
+module.exports = class CustomerAddress extends Address {
   businessName;
 }

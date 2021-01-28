@@ -1,6 +1,6 @@
-import Contact from './Contact';
+const Contact = require('./Contact');
 
-export default class CustomerContact extends Contact {
+module.exports = class CustomerContact extends Contact {
   initials;
 
   legalId;

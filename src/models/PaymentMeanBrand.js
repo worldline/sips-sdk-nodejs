@@ -1,4 +1,4 @@
-export default class PaymentMeanBrand {
+module.exports = class PaymentMeanBrand {
   static AMEX = 'AMEX';
 
   static BCMC = 'BCMC';

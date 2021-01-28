@@ -1,4 +1,4 @@
-export default class ResponseData {
+module.exports = class ResponseData {
   amount;
 
   acquirerResponseCode;

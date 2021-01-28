@@ -1,4 +1,4 @@
-export default class Currency {
+module.exports = class Currency {
   static ARS = '032';
 
   static AUD = '036';

@@ -1,3 +1,3 @@
-export default class PaypageData {
+module.exports = class PaypageData {
   bypassReceiptPage;
 }

@@ -1,9 +1,9 @@
-import assert from 'assert';
-import { beforeEach, describe, it } from 'mocha';
+const assert = require('assert');
+const { beforeEach, describe, it } = require('mocha');
 import {
   Currency, Environment, InitializationResponse, OrderChannel, PaymentRequest, RedirectionStatusCode,
 } from '@worldline/sips-payment-dom';
-import PaypageClient from '../src/PaypageClient';
+const PaypageClient = require('../src/PaypageClient');
 
 describe('PaypageClient.js', () => {
   let paypageClient;
