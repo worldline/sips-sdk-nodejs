@@ -1,10 +1,7 @@
 module.exports = {
-  extends: ["eslint:recommended","plugin:node/recommended"],
-  parser: "babel-eslint",
-  rules: {
-    "node/no-unsupported-features/es-syntax": "off",
-  },
+  extends: ['airbnb-base'],
+  parser: '@babel/eslint-parser',
   env: {
     node: true,
-  }
+  },
 };

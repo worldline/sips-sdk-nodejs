@@ -1,5 +1,3 @@
-> :bulb: This package is currently in pre-release. Although it's fully functional, any feedback is welcome as we try to improve general code style & usage before graduating it to a stable version.
-
 # SIPS Payment SDK [![npm version](https://img.shields.io/npm/v/@worldline/sips-payment-sdk.svg)](https://www.npmjs.com/package/@worldline/sips-payment-sdk)
 This package provides a Node.js implementation for SIPS, the Worldline e-payments gateway.
 
@@ -8,13 +6,13 @@ This package provides a Node.js implementation for SIPS, the Worldline e-payment
 ## Installing
 
 This library is provided as two separate packages on NPM . To install it, simply run:
-```
-$ npm install sips-payment-sdk sips-payment-dom
+```shell
+npm install sips-payment-sdk
 ```
 
 Or if you prefer Yarn, run:
-```
-$ yarn add sips-payment-sdk sips-payment-dom
+```shell
+yarn add sips-payment-sdk
 ```
 
 
@@ -26,12 +24,12 @@ The example below uses ES6's syntax. To run on any Node.js, code should be trans
 ### Initialization
 First, create a client for the desired environment using your merchant ID, key version & secret key:
 ```js
-import { PaypageClient } from '@worldline/sips-payment-sdk';
-import { Environment } from '@worldline/sips-payment-dom';
+const { PaypageClient } = require('@worldline/sips-payment-sdk');
+const { Environment } = require('@worldline/sips-payment-dom');
 
 const paypageClient = new PaypageClient(
-  Environment.SIMU, 
-  '002001000000001', 
+  Environment.TEST,
+  '002001000000001',
   1, // This shouldn't be hardcoded here...
   '002001000000001_KEY1'); // ...and neither should this.
 ```
@@ -39,7 +37,7 @@ const paypageClient = new PaypageClient(
 Then set up a request to initalize a session on the SIPS server:
 
 ```js
-import { PaymentRequest, Currency, OrderChannel } from '@worldline/sips-payment-dom';
+const { PaymentRequest, Currency, OrderChannel } = require('@worldline/sips-payment-dom');
 
 const paymentRequest = new PaymentRequest();
 paymentRequest.amount = 2;
@@ -49,21 +47,21 @@ paymentRequest.orderChannel = OrderChannel.INTERNET;
 Add unique reference for the transaction:
 
 ```js
-paymentRequest.transactionReference = 'My awesome transaction reference';
+paymentRequest.transactionReference = 'unique-transaction-ref';
 ```
 
 And initialize your session on the server:
 ```js
-const initializationResponse = paypageClient.initializePayment(paymentRequest);
+const initializationResponse = await paypageClient.initializePayment(paymentRequest);
 ```
 
-The `initializationResponse` you'll receive from the server contains all information needed to continue 
-handling your transaction. If you're initialization was successful, your response will contain a 
+The `initializationResponse` you'll receive from the server contains all information needed to continue
+handling your transaction. If you're initialization was successful, your response will contain a
 `RedirectionStatusCode.TRANSACTION_INITIALIZED`.
 
 ### Making the payment
 In case your initialization was successful, you have to use the `redirectionUrl` received to perform a POST request
-with both the `redirectionData` and `seal` as parameters. Since this should redirect the customer the SIPS 
+with both the `redirectionData` and `seal` as parameters. Since this should redirect the customer the SIPS
 payment page, the cleanest example is a simple HTML form:
 
 ```html
@@ -75,14 +73,14 @@ payment page, the cleanest example is a simple HTML form:
 ```
 
 ### Verifying the payment
-When your customer is done, he will be able to return to your application. This is done 
+When your customer is done, he will be able to return to your application. This is done
 via a form, making a POST request to the `normalReturnUrl` provided during the initialization of your payment.
 This POST request contains details on the payment. You can simply decode these responses, providing the parameters included in the received request to your `paypageClient`:
 
 ```js
 const paypageResponse = paypageClient.decodeResponse(request.data);
 ```
- 
+
 > :warning: Since the customer is not always redirecting back (e.g. he closes the confirmation page), it's a
 a good practice to include an `automaticReturnUrl`. SIPS will always POST details on the transaction on this URL,
 even if a customer doesn't redirect back to your application.
