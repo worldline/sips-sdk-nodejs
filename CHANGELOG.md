@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.1 - [2021-01-29]
+### Changed
+- Bumped InterfaceVersion
+
 ## 2.0.0 - [2021-01-28]
 :warning: Rewrote library from scratch, please review README on usage
 
