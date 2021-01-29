@@ -19,8 +19,6 @@ yarn add sips-payment-sdk
 ## Usage
 > :bulb: Currently this library only supports SIPS in pay page mode.
 
-The example below uses ES6's syntax. To run on any Node.js, code should be transpiled to ES5 using Babel.
-
 ### Initialization
 First, create a client for the desired environment using your merchant ID, key version & secret key:
 ```js
