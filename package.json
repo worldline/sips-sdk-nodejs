@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/worldline/sips-sdk-nodejs/issues"
   },
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
